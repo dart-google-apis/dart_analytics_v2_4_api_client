@@ -31,13 +31,13 @@ class DataResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> get(String ids, String start_date, String end_date, String metrics, {String dimensions, String filters, int max_results, String segment, String sort, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> get(core.String ids, core.String start_date, core.String end_date, core.String metrics, {core.String dimensions, core.String filters, core.int max_results, core.String segment, core.String sort, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "data";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (dimensions != null) queryParams["dimensions"] = dimensions;
     if (end_date == null) paramErrors.add("end_date is required");
     if (end_date != null) queryParams["end-date"] = end_date;
@@ -111,13 +111,13 @@ class ManagementAccountsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> list({int max_results, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> list({core.int max_results, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "management/accounts";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (max_results != null) queryParams["max-results"] = max_results;
     if (start_index != null) queryParams["start-index"] = start_index;
     if (optParams != null) {
@@ -163,13 +163,13 @@ class ManagementGoalsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> list(String accountId, String webPropertyId, String profileId, {int max_results, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> list(core.String accountId, core.String webPropertyId, core.String profileId, {core.int max_results, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (accountId == null) paramErrors.add("accountId is required");
     if (accountId != null) urlParams["accountId"] = accountId;
     if (max_results != null) queryParams["max-results"] = max_results;
@@ -219,13 +219,13 @@ class ManagementProfilesResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> list(String accountId, String webPropertyId, {int max_results, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> list(core.String accountId, core.String webPropertyId, {core.int max_results, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties/{webPropertyId}/profiles";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (accountId == null) paramErrors.add("accountId is required");
     if (accountId != null) urlParams["accountId"] = accountId;
     if (max_results != null) queryParams["max-results"] = max_results;
@@ -269,13 +269,13 @@ class ManagementSegmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> list({int max_results, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> list({core.int max_results, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "management/segments";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (max_results != null) queryParams["max-results"] = max_results;
     if (start_index != null) queryParams["start-index"] = start_index;
     if (optParams != null) {
@@ -317,13 +317,13 @@ class ManagementWebpropertiesResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> list(String accountId, {int max_results, int start_index, Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> list(core.String accountId, {core.int max_results, core.int start_index, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (accountId == null) paramErrors.add("accountId is required");
     if (accountId != null) urlParams["accountId"] = accountId;
     if (max_results != null) queryParams["max-results"] = max_results;
