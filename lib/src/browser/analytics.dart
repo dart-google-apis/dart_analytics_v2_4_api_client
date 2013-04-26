@@ -4,10 +4,10 @@ part of analytics_v2_4_api_browser;
 /** View and manage your Google Analytics data */
 class Analytics extends BrowserClient {
 
-  DataResource _data;
-  DataResource get data => _data;
-  ManagementResource _management;
-  ManagementResource get management => _management;
+  DataResource_ _data;
+  DataResource_ get data => _data;
+  ManagementResource_ _management;
+  ManagementResource_ get management => _management;
 
   /** OAuth Scope2: View and manage your Google Analytics data */
   static const core.String ANALYTICS_SCOPE = "https://www.googleapis.com/auth/analytics";
@@ -67,7 +67,7 @@ class Analytics extends BrowserClient {
   Analytics([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/analytics/v2.4/";
     rootUrl = "https://www.googleapis.com:443/";
-    _data = new DataResource(this);
-    _management = new ManagementResource(this);
+    _data = new DataResource_(this);
+    _management = new ManagementResource_(this);
   }
 }

@@ -1,8 +1,8 @@
 part of analytics_v2_4_api_client;
 
-class DataResource extends Resource {
+class DataResource_ extends Resource {
 
-  DataResource(Client client) : super(client) {
+  DataResource_(Client client) : super(client) {
   }
 
   /**
@@ -61,7 +61,7 @@ class DataResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -74,31 +74,31 @@ class DataResource extends Resource {
   }
 }
 
-class ManagementResource extends Resource {
+class ManagementResource_ extends Resource {
 
-  ManagementAccountsResource _accounts;
-  ManagementAccountsResource get accounts => _accounts;
-  ManagementGoalsResource _goals;
-  ManagementGoalsResource get goals => _goals;
-  ManagementProfilesResource _profiles;
-  ManagementProfilesResource get profiles => _profiles;
-  ManagementSegmentsResource _segments;
-  ManagementSegmentsResource get segments => _segments;
-  ManagementWebpropertiesResource _webproperties;
-  ManagementWebpropertiesResource get webproperties => _webproperties;
+  ManagementAccountsResource_ _accounts;
+  ManagementAccountsResource_ get accounts => _accounts;
+  ManagementGoalsResource_ _goals;
+  ManagementGoalsResource_ get goals => _goals;
+  ManagementProfilesResource_ _profiles;
+  ManagementProfilesResource_ get profiles => _profiles;
+  ManagementSegmentsResource_ _segments;
+  ManagementSegmentsResource_ get segments => _segments;
+  ManagementWebpropertiesResource_ _webproperties;
+  ManagementWebpropertiesResource_ get webproperties => _webproperties;
 
-  ManagementResource(Client client) : super(client) {
-  _accounts = new ManagementAccountsResource(client);
-  _goals = new ManagementGoalsResource(client);
-  _profiles = new ManagementProfilesResource(client);
-  _segments = new ManagementSegmentsResource(client);
-  _webproperties = new ManagementWebpropertiesResource(client);
+  ManagementResource_(Client client) : super(client) {
+  _accounts = new ManagementAccountsResource_(client);
+  _goals = new ManagementGoalsResource_(client);
+  _profiles = new ManagementProfilesResource_(client);
+  _segments = new ManagementSegmentsResource_(client);
+  _webproperties = new ManagementWebpropertiesResource_(client);
   }
 }
 
-class ManagementAccountsResource extends Resource {
+class ManagementAccountsResource_ extends Resource {
 
-  ManagementAccountsResource(Client client) : super(client) {
+  ManagementAccountsResource_(Client client) : super(client) {
   }
 
   /**
@@ -129,7 +129,7 @@ class ManagementAccountsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -142,9 +142,9 @@ class ManagementAccountsResource extends Resource {
   }
 }
 
-class ManagementGoalsResource extends Resource {
+class ManagementGoalsResource_ extends Resource {
 
-  ManagementGoalsResource(Client client) : super(client) {
+  ManagementGoalsResource_(Client client) : super(client) {
   }
 
   /**
@@ -187,7 +187,7 @@ class ManagementGoalsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -200,9 +200,9 @@ class ManagementGoalsResource extends Resource {
   }
 }
 
-class ManagementProfilesResource extends Resource {
+class ManagementProfilesResource_ extends Resource {
 
-  ManagementProfilesResource(Client client) : super(client) {
+  ManagementProfilesResource_(Client client) : super(client) {
   }
 
   /**
@@ -241,7 +241,7 @@ class ManagementProfilesResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -254,9 +254,9 @@ class ManagementProfilesResource extends Resource {
   }
 }
 
-class ManagementSegmentsResource extends Resource {
+class ManagementSegmentsResource_ extends Resource {
 
-  ManagementSegmentsResource(Client client) : super(client) {
+  ManagementSegmentsResource_(Client client) : super(client) {
   }
 
   /**
@@ -287,7 +287,7 @@ class ManagementSegmentsResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -300,9 +300,9 @@ class ManagementSegmentsResource extends Resource {
   }
 }
 
-class ManagementWebpropertiesResource extends Resource {
+class ManagementWebpropertiesResource_ extends Resource {
 
-  ManagementWebpropertiesResource(Client client) : super(client) {
+  ManagementWebpropertiesResource_(Client client) : super(client) {
   }
 
   /**
@@ -337,7 +337,7 @@ class ManagementWebpropertiesResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
