@@ -66,7 +66,7 @@ class Analytics extends ConsoleClient {
 
   Analytics([oauth2.OAuth2Console auth]) : super(auth) {
     basePath = "/analytics/v2.4/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _data = new DataResource_(this);
     _management = new ManagementResource_(this);
   }
