@@ -32,7 +32,6 @@ class DataResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> get(core.String ids, core.String start_date, core.String end_date, core.String metrics, {core.String dimensions, core.String filters, core.int max_results, core.String segment, core.String sort, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "data";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -61,16 +60,12 @@ class DataResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
@@ -112,7 +107,6 @@ class ManagementAccountsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> list({core.int max_results, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "management/accounts";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -129,16 +123,12 @@ class ManagementAccountsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
@@ -164,7 +154,6 @@ class ManagementGoalsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> list(core.String accountId, core.String webPropertyId, core.String profileId, {core.int max_results, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -187,16 +176,12 @@ class ManagementGoalsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
@@ -220,7 +205,6 @@ class ManagementProfilesResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> list(core.String accountId, core.String webPropertyId, {core.int max_results, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties/{webPropertyId}/profiles";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -241,16 +225,12 @@ class ManagementProfilesResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
@@ -270,7 +250,6 @@ class ManagementSegmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> list({core.int max_results, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "management/segments";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -287,16 +266,12 @@ class ManagementSegmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
@@ -318,7 +293,6 @@ class ManagementWebpropertiesResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> list(core.String accountId, {core.int max_results, core.int start_index, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "management/accounts/{accountId}/webproperties";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -337,16 +311,12 @@ class ManagementWebpropertiesResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 }
 
