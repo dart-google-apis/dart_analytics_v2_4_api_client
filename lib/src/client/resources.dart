@@ -1,14 +1,16 @@
-part of analytics_v2_4_api_client;
+part of analytics_v2_4_api;
 
-class DataResource_ extends Resource {
+class DataResource_ {
 
-  DataResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  DataResource_(Client client) :
+      _client = client;
 
   /**
-   * Returns Analytics report data for a profile.
+   * Returns Analytics report data for a view (profile).
    *
-   * [ids] - Unique table ID for retrieving report data. Table ID is of the form ga:XXXX, where XXXX is the Analytics profile ID.
+   * [ids] - Unique table ID for retrieving report data. Table ID is of the form ga:XXXX, where XXXX is the Analytics view (profile) ID.
    *
    * [start_date] - Start date for fetching report data. All requests should specify a start date formatted as YYYY-MM-DD.
    *
@@ -69,32 +71,31 @@ class DataResource_ extends Resource {
   }
 }
 
-class ManagementResource_ extends Resource {
+class ManagementResource_ {
 
-  ManagementAccountsResource_ _accounts;
-  ManagementAccountsResource_ get accounts => _accounts;
-  ManagementGoalsResource_ _goals;
-  ManagementGoalsResource_ get goals => _goals;
-  ManagementProfilesResource_ _profiles;
-  ManagementProfilesResource_ get profiles => _profiles;
-  ManagementSegmentsResource_ _segments;
-  ManagementSegmentsResource_ get segments => _segments;
-  ManagementWebpropertiesResource_ _webproperties;
-  ManagementWebpropertiesResource_ get webproperties => _webproperties;
+  final Client _client;
 
-  ManagementResource_(Client client) : super(client) {
-  _accounts = new ManagementAccountsResource_(client);
-  _goals = new ManagementGoalsResource_(client);
-  _profiles = new ManagementProfilesResource_(client);
-  _segments = new ManagementSegmentsResource_(client);
-  _webproperties = new ManagementWebpropertiesResource_(client);
-  }
+  final ManagementAccountsResource_ accounts;
+  final ManagementGoalsResource_ goals;
+  final ManagementProfilesResource_ profiles;
+  final ManagementSegmentsResource_ segments;
+  final ManagementWebpropertiesResource_ webproperties;
+
+  ManagementResource_(Client client) :
+      _client = client,
+      accounts = new ManagementAccountsResource_(client),
+      goals = new ManagementGoalsResource_(client),
+      profiles = new ManagementProfilesResource_(client),
+      segments = new ManagementSegmentsResource_(client),
+      webproperties = new ManagementWebpropertiesResource_(client);
 }
 
-class ManagementAccountsResource_ extends Resource {
+class ManagementAccountsResource_ {
 
-  ManagementAccountsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  ManagementAccountsResource_(Client client) :
+      _client = client;
 
   /**
    * Lists all accounts to which the user has access.
@@ -132,10 +133,12 @@ class ManagementAccountsResource_ extends Resource {
   }
 }
 
-class ManagementGoalsResource_ extends Resource {
+class ManagementGoalsResource_ {
 
-  ManagementGoalsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  ManagementGoalsResource_(Client client) :
+      _client = client;
 
   /**
    * Lists goals to which the user has access.
@@ -144,7 +147,7 @@ class ManagementGoalsResource_ extends Resource {
    *
    * [webPropertyId] - Web property ID to retrieve goals for. Can either be a specific web property ID or '~all', which refers to all the web properties that user has access to.
    *
-   * [profileId] - Profile ID to retrieve goals for. Can either be a specific profile ID or '~all', which refers to all the profiles that user has access to.
+   * [profileId] - View (Profile) ID to retrieve goals for. Can either be a specific view (profile) ID or '~all', which refers to all the views (profiles) that user has access to.
    *
    * [max_results] - The maximum number of goals to include in this response.
    *
@@ -185,19 +188,21 @@ class ManagementGoalsResource_ extends Resource {
   }
 }
 
-class ManagementProfilesResource_ extends Resource {
+class ManagementProfilesResource_ {
 
-  ManagementProfilesResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  ManagementProfilesResource_(Client client) :
+      _client = client;
 
   /**
-   * Lists profiles to which the user has access.
+   * Lists views (profiles) to which the user has access.
    *
-   * [accountId] - Account ID for the profiles to retrieve. Can either be a specific account ID or '~all', which refers to all the accounts to which the user has access.
+   * [accountId] - Account ID for the views (profiles) to retrieve. Can either be a specific account ID or '~all', which refers to all the accounts to which the user has access.
    *
-   * [webPropertyId] - Web property ID for the profiles to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties to which the user has access.
+   * [webPropertyId] - Web property ID for the views (profiles) to retrieve. Can either be a specific web property ID or '~all', which refers to all the web properties to which the user has access.
    *
-   * [max_results] - The maximum number of profiles to include in this response.
+   * [max_results] - The maximum number of views (profiles) to include in this response.
    *
    * [start_index] - An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
    *   Minimum: 1
@@ -234,10 +239,12 @@ class ManagementProfilesResource_ extends Resource {
   }
 }
 
-class ManagementSegmentsResource_ extends Resource {
+class ManagementSegmentsResource_ {
 
-  ManagementSegmentsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  ManagementSegmentsResource_(Client client) :
+      _client = client;
 
   /**
    * Lists advanced segments to which the user has access.
@@ -275,10 +282,12 @@ class ManagementSegmentsResource_ extends Resource {
   }
 }
 
-class ManagementWebpropertiesResource_ extends Resource {
+class ManagementWebpropertiesResource_ {
 
-  ManagementWebpropertiesResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  ManagementWebpropertiesResource_(Client client) :
+      _client = client;
 
   /**
    * Lists web properties to which the user has access.

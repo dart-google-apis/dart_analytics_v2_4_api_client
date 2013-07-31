@@ -1,2 +1,2 @@
-part of analytics_v2_4_api_client;
+part of analytics_v2_4_api;
 
