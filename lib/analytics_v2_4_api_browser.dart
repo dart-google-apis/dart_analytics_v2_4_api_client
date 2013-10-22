@@ -2,7 +2,7 @@ library analytics_v2_4_api.browser;
 
 import "package:google_oauth2_client/google_oauth2_browser.dart" as oauth;
 
-import 'package:google_analytics_v2_4_api/src/cloud_api_browser.dart';
+import 'package:google_analytics_v2_4_api/src/browser_client.dart';
 import "package:google_analytics_v2_4_api/analytics_v2_4_api_client.dart";
 
 /** View and manage your Google Analytics data */

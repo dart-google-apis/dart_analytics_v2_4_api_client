@@ -2,11 +2,11 @@ library analytics_v2_4_api;
 
 import "dart:core" as core;
 import "dart:async" as async;
-import "dart:json" as JSON;
+import "dart:convert";
 import 'dart:collection' as dart_collection;
 
-import 'package:google_analytics_v2_4_api/src/cloud_api.dart';
-export 'package:google_analytics_v2_4_api/src/cloud_api.dart' show APIRequestException;
+import 'package:google_analytics_v2_4_api/src/client_base.dart';
+export 'package:google_analytics_v2_4_api/src/client_base.dart' show APIRequestError;
 
 part 'src/client/client.dart';
 part 'src/client/schemas.dart';
