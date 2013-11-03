@@ -14,7 +14,7 @@ Adding dependency to pubspec.yaml
 
 ```
   dependencies:
-    google_analytics_v2_4_api: '>=0.4.9'
+    google_analytics_v2_4_api: '>=0.4.10'
 ```
 
 For web applications:
