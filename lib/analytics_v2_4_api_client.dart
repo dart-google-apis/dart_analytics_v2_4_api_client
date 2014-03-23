@@ -11,3 +11,4 @@ export 'package:google_analytics_v2_4_api/src/client_base.dart' show APIRequestE
 part 'src/client/client.dart';
 part 'src/client/schemas.dart';
 part 'src/client/resources.dart';
+part 'src/client/utils.dart';
