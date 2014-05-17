@@ -16,7 +16,7 @@ class DataResource_ {
    *
    * [end_date] - End date for fetching report data. All requests should specify an end date formatted as YYYY-MM-DD.
    *
-   * [metrics] - A comma-separated list of Analytics metrics. E.g., 'ga:visits,ga:pageviews'. At least one metric must be specified to retrieve a valid Analytics report.
+   * [metrics] - A comma-separated list of Analytics metrics. E.g., 'ga:sessions,ga:pageviews'. At least one metric must be specified to retrieve a valid Analytics report.
    *
    * [dimensions] - A comma-separated list of Analytics dimensions. E.g., 'ga:browser,ga:city'.
    *
