@@ -6,6 +6,7 @@ import 'package:google_analytics_v2_4_api/src/browser_client.dart';
 import "package:google_analytics_v2_4_api/analytics_v2_4_api_client.dart";
 
 /** View and manage your Google Analytics data */
+@deprecated
 class Analytics extends Client with BrowserClient {
 
   /** OAuth Scope2: View and manage your Google Analytics data */
